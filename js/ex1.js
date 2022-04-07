@@ -33,3 +33,12 @@ const getCharacters = houseCode => {
       return []; // Empty array
   }
 }
+
+document.getElementById("house").addEventListener("change", e => {
+  console.log("House code: " + e.target.value);
+  });
+
+// Show the character list based on selected house
+const characterElement = document.getElementById("characters");
+characterElement.addEventListener("change", getCharacters);
+
